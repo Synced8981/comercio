@@ -28,10 +28,26 @@
                     <th>Preço</th>
                     <th>Editar</th>
                 </tr>
-                <tbody>
-
-                </tbody>
             </thead>
+            <tbody>
+                <tr th:each="produto : ${listaDeProdutos}">
+                    <td th:text="${produto.id}"></td>
+                    <td th:text="${produto.nome}"></td>
+                    <td th:text="${produto.codigoBarras}"></td>
+                    <td th:text="${#numbers.formatCurrency(produto.preco)}"></td>
+                    <td th:text="${produto.descricao"></td>
+                    <td th:text="${produto.codStatus}? 'Ativo' : 'Inativo'"></td>
+                    <td>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-edit ml-2"></i>
+                        </a>
+                    </td>
+
+
+
+                </tr>
+
+            </tbody>
         </table>
     </div>
     

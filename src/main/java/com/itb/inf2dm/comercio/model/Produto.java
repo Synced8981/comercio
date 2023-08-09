@@ -7,6 +7,7 @@ public class Produto {
 	private String aceitar;
 	private String nome;
 	private double preco;
+	private boolean codStatus;
 	
 	//public : Modificador de acesso livre para todas as classes.
 	//private : Modificador de acesso rstrito apenas para membros da
@@ -52,6 +53,14 @@ public class Produto {
 	
 	public void setPreco(double preco) {
 		this.preco = preco;
+	}
+	
+	public boolean getCodStatus() {
+		return codStatus;
+	}
+	
+	public void setCodStatus(boolean codStatus) {
+		
 	}
 	
 }
